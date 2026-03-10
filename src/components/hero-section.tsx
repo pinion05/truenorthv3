@@ -17,7 +17,7 @@ export function HeroSection() {
           loop
           muted
           playsInline
-          className="h-full w-full object-cover opacity-100 brightness-[0.38] contrast-[1.08] saturate-[0.82]"
+          className="h-full w-full object-cover opacity-100 brightness-[0.44] contrast-[1.08] saturate-[0.82]"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
