@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 export function HeroSection() {
+  const isGithubActions = process.env.NEXT_PUBLIC_GITHUB_ACTIONS || false;
+  const videoSrc = isGithubActions ? "/truenorthv3/videos/hero-bg.mp4" : "/videos/hero-bg.mp4";
+
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0d0d12]">
       {/* Background Video */}
@@ -15,7 +18,7 @@ export function HeroSection() {
           playsInline
           className="w-full h-full object-cover opacity-50 brightness-100 contrast-125"
         >
-          <source src="/truenorthv3/videos/hero-bg.mp4" type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d12]/80 via-[#0d0d12]/50 to-[#0d0d12]/90 mix-blend-multiply"></div>
