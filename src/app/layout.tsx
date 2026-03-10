@@ -41,21 +41,21 @@ export default function RootLayout({
             aria-hidden="true"
             className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.14),_transparent_24%),linear-gradient(180deg,_#050608_0%,_#0a0d14_46%,_#050608_100%)]" />
-            <div className="absolute inset-0 opacity-28 mix-blend-screen [filter:brightness(1.06)_contrast(1.08)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.08),_transparent_22%),linear-gradient(180deg,_#020305_0%,_#05070c_38%,_#020305_100%)]" />
+            <div className="absolute inset-0 opacity-34 [filter:brightness(0.9)_contrast(1.05)_saturate(0.9)]">
               <Beams
-                beamWidth={4}
-                beamHeight={20}
-                beamNumber={30}
-                lightColor="#cfcfcf"
-                speed={3.9}
+                beamWidth={2}
+                beamHeight={15}
+                beamNumber={12}
+                lightColor="#ffffff"
+                speed={2}
                 noiseIntensity={1.75}
                 scale={0.2}
-                rotation={30}
+                rotation={0}
                 className="h-full w-full"
               />
             </div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(5,6,8,0.08)_68%,_rgba(5,6,8,0.28)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,_rgba(255,255,255,0.05),_transparent_26%),radial-gradient(circle_at_76%_22%,_rgba(255,255,255,0.035),_transparent_24%),linear-gradient(180deg,_transparent_0%,_rgba(2,3,5,0.14)_76%,_rgba(2,3,5,0.24)_100%)]" />
           </div>
           <div className="relative min-h-screen">
             {children}

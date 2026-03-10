@@ -190,7 +190,7 @@ function extendPhysicalMaterial(cfg: ExtendedMaterialConfig) {
     lights: true,
     fog: Boolean(cfg.material?.fog),
     transparent: true,
-    blending: THREE.AdditiveBlending,
+    opacity: 0.72,
     depthWrite: false,
     side: THREE.DoubleSide,
   });
@@ -391,7 +391,7 @@ export default function Beams({
         },
         material: { fog: true },
         uniforms: {
-          diffuse: new THREE.Color(...hexToNormalizedRgb(lightColor)),
+          diffuse: new THREE.Color(...hexToNormalizedRgb("#111216")),
           time: { value: 0 },
           roughness: 0.3,
           metalness: 0.3,
@@ -401,7 +401,7 @@ export default function Beams({
           uScale: scale,
         },
       }),
-    [lightColor, noiseIntensity, scale, speed],
+    [noiseIntensity, scale, speed],
   );
 
   return (
