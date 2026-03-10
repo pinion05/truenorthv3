@@ -1,13 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ParticleBackground } from "./ui/particle-background";
 import { Button } from "./ui/button";
 
 export function HeroSection() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0d0d12]">
-      <ParticleBackground />
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-30 grayscale brightness-75 contrast-125"
+        >
+          <source src="/truenorthv3/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d12]/80 via-[#0d0d12]/50 to-[#0d0d12]/90 mix-blend-multiply"></div>
+      </div>
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
         <motion.h1 
