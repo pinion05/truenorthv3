@@ -189,6 +189,10 @@ function extendPhysicalMaterial(cfg: ExtendedMaterialConfig) {
     fragmentShader,
     lights: true,
     fog: Boolean(cfg.material?.fog),
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    side: THREE.DoubleSide,
   });
 }
 
@@ -387,7 +391,7 @@ export default function Beams({
         },
         material: { fog: true },
         uniforms: {
-          diffuse: new THREE.Color(...hexToNormalizedRgb("#000000")),
+          diffuse: new THREE.Color(...hexToNormalizedRgb(lightColor)),
           time: { value: 0 },
           roughness: 0.3,
           metalness: 0.3,
@@ -397,13 +401,17 @@ export default function Beams({
           uScale: scale,
         },
       }),
-    [noiseIntensity, scale, speed],
+    [lightColor, noiseIntensity, scale, speed],
   );
 
   return (
     <Canvas
       dpr={[1, 2]}
       frameloop="always"
+      gl={{ alpha: true, antialias: true }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+      }}
       className={className ?? "relative h-full w-full"}
     >
       <group rotation={[0, 0, degToRad(rotation)]}>
@@ -417,7 +425,6 @@ export default function Beams({
         <DirLight color={lightColor} position={[0, 3, 10]} />
       </group>
       <ambientLight intensity={1} />
-      <color attach="background" args={["#000000"]} />
       <PerspectiveCamera makeDefault position={[0, 0, 20]} fov={30} />
     </Canvas>
   );

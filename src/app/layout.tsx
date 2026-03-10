@@ -37,23 +37,27 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="relative isolate min-h-screen bg-background">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none fixed inset-0 -z-10 overflow-hidden opacity-65"
-            >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 z-30 overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.06),_transparent_28%),linear-gradient(135deg,_rgba(255,255,255,0.01)_0%,_transparent_42%,_rgba(255,255,255,0.015)_100%)]" />
+            <div className="absolute inset-0 [mask-image:radial-gradient(circle_at_center,white,rgba(255,255,255,0.86)_62%,transparent_100%)]" />
+            <div className="absolute inset-0 opacity-18 mix-blend-screen [filter:brightness(1.04)_contrast(1.06)]">
               <Beams
-                beamWidth={6}
-                beamHeight={25}
-                beamNumber={50}
-                lightColor="#8f8f8f"
-                speed={4.3}
+                beamWidth={4}
+                beamHeight={20}
+                beamNumber={30}
+                lightColor="#cfcfcf"
+                speed={3.9}
                 noiseIntensity={1.75}
                 scale={0.2}
                 rotation={30}
                 className="h-full w-full"
               />
             </div>
+          </div>
+          <div className="relative min-h-screen bg-background">
             {children}
           </div>
         </ThemeProvider>
