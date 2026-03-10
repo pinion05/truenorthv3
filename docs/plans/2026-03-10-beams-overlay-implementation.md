@@ -2,9 +2,9 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** React Bits `Beams`를 사이트 전체에서 확실히 보이는 전역 오버레이로 재구성한다.
+**Goal:** React Bits `Beams`를 사이트 공통 배경으로 유지하면서, 최상단 히어로 100vh 구간에는 영상 배경을 다시 배치한다.
 
-**Architecture:** `src/app/layout.tsx`에서 `Beams`를 고정 오버레이 레이어로 승격하고, 콘텐츠 래퍼와 헤더/푸터의 stacking context를 조정한다. `src/components/ui/beams.tsx`는 React Bits 원본 구현을 유지하되 전역 오버레이 시나리오에 맞는 class/alpha 제어만 허용한다.
+**Architecture:** `src/app/layout.tsx`에서 `Beams`를 고정 배경 레이어로 유지하고, `src/components/hero-section.tsx`에서만 100vh 영상 레이어를 복원한다. 영상은 히어로 내부의 자체 오버레이와 섞고, 히어로 외 나머지 구간은 현재의 다크 실크 `Beams` 배경을 유지한다.
 
 **Tech Stack:** Next.js App Router, React 19, TypeScript, Tailwind CSS, Three.js, @react-three/fiber, @react-three/drei
 
@@ -106,4 +106,33 @@ Expected: 커밋 대상이 없거나 의도한 산출물만 남음
 
 ```bash
 git push
+```
+
+### Task 5: 히어로 영상 복원
+
+**Files:**
+- Modify: `src/components/hero-section.tsx`
+
+**Step 1: 현재 구조 확인**
+
+Run: `sed -n '1,220p' src/components/hero-section.tsx`
+Expected: 영상 없이 gradient/div만 배경으로 사용 중
+
+**Step 2: 최소 구현**
+
+- `public/videos/hero-bg.mp4`를 다시 사용
+- 히어로 내부에 `absolute inset-0` 100vh 비디오 레이어 추가
+- 텍스트 가독성을 위한 dark overlay 유지
+- 전역 `Beams`와 충돌하지 않도록 z-index를 히어로 내부에서만 정리
+
+**Step 3: 검증**
+
+Run: `bunx tsc --noEmit && bun run build`
+Expected: 성공
+
+**Step 4: Commit**
+
+```bash
+git add src/components/hero-section.tsx
+git commit -m "feat: restore hero video over beams background"
 ```
