@@ -4,26 +4,15 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 export function HeroSection() {
-  const isGithubActions = process.env.NEXT_PUBLIC_GITHUB_ACTIONS || false;
-  const videoSrc = isGithubActions ? "/truenorthv3/videos/hero-bg.mp4" : "/videos/hero-bg.mp4";
-
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0d0d12]">
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-50 brightness-100 contrast-125"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d12]/80 via-[#0d0d12]/50 to-[#0d0d12]/90 mix-blend-multiply"></div>
-      </div>
-      
+    <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_20%,rgba(196,164,124,0.12),transparent_32%),linear-gradient(180deg,rgba(8,10,16,0.12)_0%,rgba(8,10,16,0.45)_70%,rgba(8,10,16,0.7)_100%)]" />
+      <div className="absolute inset-x-0 top-[12%] z-0 h-40 bg-[radial-gradient(circle,rgba(255,255,255,0.08),transparent_68%)] blur-3xl" />
+      <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-[linear-gradient(180deg,transparent_0%,rgba(5,6,8,0.72)_100%)]" />
+      <div className="absolute inset-y-0 left-[14%] z-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      <div className="absolute inset-y-0 right-[14%] z-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      <div className="absolute inset-x-[18%] top-[22%] z-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}

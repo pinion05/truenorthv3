@@ -39,11 +39,10 @@ export default function RootLayout({
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none fixed inset-0 z-30 overflow-hidden"
+            className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.06),_transparent_28%),linear-gradient(135deg,_rgba(255,255,255,0.01)_0%,_transparent_42%,_rgba(255,255,255,0.015)_100%)]" />
-            <div className="absolute inset-0 [mask-image:radial-gradient(circle_at_center,white,rgba(255,255,255,0.86)_62%,transparent_100%)]" />
-            <div className="absolute inset-0 opacity-18 mix-blend-screen [filter:brightness(1.04)_contrast(1.06)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.14),_transparent_24%),linear-gradient(180deg,_#050608_0%,_#0a0d14_46%,_#050608_100%)]" />
+            <div className="absolute inset-0 opacity-28 mix-blend-screen [filter:brightness(1.06)_contrast(1.08)]">
               <Beams
                 beamWidth={4}
                 beamHeight={20}
@@ -56,8 +55,9 @@ export default function RootLayout({
                 className="h-full w-full"
               />
             </div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(5,6,8,0.08)_68%,_rgba(5,6,8,0.28)_100%)]" />
           </div>
-          <div className="relative min-h-screen bg-background">
+          <div className="relative min-h-screen">
             {children}
           </div>
         </ThemeProvider>
