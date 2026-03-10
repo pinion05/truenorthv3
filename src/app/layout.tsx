@@ -51,7 +51,7 @@ export default function RootLayout({
                 speed={2}
                 noiseIntensity={1.75}
                 scale={0.2}
-                rotation={0}
+                rotation={30}
                 className="h-full w-full"
               />
             </div>
