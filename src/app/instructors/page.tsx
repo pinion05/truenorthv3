@@ -63,7 +63,7 @@ export default function InstructorsPage() {
   ];
 
   return (
-    <div className="bg-[#121212] min-h-screen text-[#E0E0E0] pt-24 pb-32">
+    <div className="min-h-screen text-[#E0E0E0] pt-24 pb-32">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

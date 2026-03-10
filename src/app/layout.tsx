@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_KR, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Beams from "@/components/ui/beams";
 
 const notoSerifKR = Noto_Serif_KR({
   weight: ["400", "700"],
@@ -36,7 +37,29 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(196,164,124,0.08),_transparent_22%),linear-gradient(180deg,_#020305_0%,_#05070c_38%,_#020305_100%)]" />
+            <div className="absolute inset-0 opacity-34 [filter:brightness(0.9)_contrast(1.05)_saturate(0.9)]">
+              <Beams
+                beamWidth={2}
+                beamHeight={25}
+                beamNumber={12}
+                lightColor="#ffffff"
+                speed={2}
+                noiseIntensity={1.75}
+                scale={0.2}
+                rotation={30}
+                className="h-full w-full"
+              />
+            </div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,_rgba(255,255,255,0.05),_transparent_26%),radial-gradient(circle_at_76%_22%,_rgba(255,255,255,0.035),_transparent_24%),linear-gradient(180deg,_transparent_0%,_rgba(2,3,5,0.14)_76%,_rgba(2,3,5,0.24)_100%)]" />
+          </div>
+          <div className="relative min-h-screen">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

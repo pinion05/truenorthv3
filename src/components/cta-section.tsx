@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export function CtaSection() {
   return (
-    <section className="relative w-full py-40 px-6 bg-[#08080b] flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden px-6 py-40">
       
       {/* Pin-light effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full pointer-events-none">

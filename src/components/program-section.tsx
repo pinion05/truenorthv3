@@ -26,7 +26,7 @@ export function ProgramSection() {
   ];
 
   return (
-    <section className="w-full py-32 px-6 md:px-12 lg:px-24 bg-[#121212]">
+    <section className="w-full px-6 py-32 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto w-full">
         
         <motion.div 

@@ -8,7 +8,7 @@ import { CtaSection } from "@/components/cta-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-background">
+    <main className="flex flex-col min-h-screen">
       <HeroSection />
       <ProblemSection />
       <DiffSection />
