@@ -11,13 +11,13 @@ export function HeroSection() {
 
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-[#020305]">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="h-full w-full object-cover opacity-42 brightness-[0.48] contrast-[1.08] saturate-[0.82]"
+          className="h-full w-full object-cover opacity-100 brightness-[0.38] contrast-[1.08] saturate-[0.82]"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
