@@ -45,7 +45,7 @@ export default function RootLayout({
             <div className="absolute inset-0 opacity-34 [filter:brightness(0.9)_contrast(1.05)_saturate(0.9)]">
               <Beams
                 beamWidth={2}
-                beamHeight={15}
+                beamHeight={25}
                 beamNumber={12}
                 lightColor="#ffffff"
                 speed={2}
