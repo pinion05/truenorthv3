@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_KR, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Beams from "@/components/ui/beams";
 
 const notoSerifKR = Noto_Serif_KR({
   weight: ["400", "700"],
@@ -36,7 +37,25 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative isolate min-h-screen bg-background">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none fixed inset-0 -z-10 overflow-hidden opacity-65"
+            >
+              <Beams
+                beamWidth={6}
+                beamHeight={25}
+                beamNumber={50}
+                lightColor="#8f8f8f"
+                speed={4.3}
+                noiseIntensity={1.75}
+                scale={0.2}
+                rotation={30}
+                className="h-full w-full"
+              />
+            </div>
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
