@@ -13,7 +13,7 @@ export function HeroSection() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-30 grayscale brightness-75 contrast-125"
+          className="w-full h-full object-cover opacity-50 grayscale brightness-100 contrast-125"
         >
           <source src="/truenorthv3/videos/hero-bg.mp4" type="video/mp4" />
         </video>
