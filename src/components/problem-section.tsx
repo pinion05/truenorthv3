@@ -35,7 +35,7 @@ export function ProblemSection() {
             대치동에서 '입시 기술'로 만들어진 스펙은 미국 명문 교육의 치열한 현장에서 가장 먼저 무너집니다.
           </p>
           <p className="text-[#E0E0E0] font-medium leading-relaxed opacity-90 mt-8 pt-8 border-t border-[#1e1e1e]">
-            준비되지 않은 합격은 아이에게 <span className="text-[#c4a47c]">'성공'</span>이 아닌 <span className="text-[#ef4444]">'고립'</span>을 선물할 뿐입니다.<br />
+            <span className="inline-block whitespace-nowrap">준비되지 않은 합격은 아이에게 <span className="text-[#c4a47c]">'성공'</span>이 아닌 <span className="text-[#ef4444]">'고립'</span>을 선물할 뿐입니다.</span><br />
             유학의 실패는 입학이 아니라 <span className="text-[#c4a47c] border-b border-[#c4a47c]/30 pb-1">준비의 방식</span>에서 시작됩니다.
           </p>
         </motion.div>

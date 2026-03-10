@@ -35,7 +35,7 @@ export default function HowWeTeachPage() {
             <span className="text-[#c4a47c]">우리의 목표가 아닙니다.</span>
           </h1>
           <p className="text-xl text-[#A0A0A0] font-light leading-relaxed max-w-3xl mx-auto">
-            합격은 당연한 결과일 뿐, TRUE NORTH는 그 너머의 세상에서 아이가 스스로 빛날 <span className="text-[#E0E0E0] font-medium border-b border-[#c4a47c]/50 pb-1">'지적 자립심'</span>을 설계합니다.
+            합격은 당연한 결과일 뿐,<br /> TRUE NORTH는 그 너머의 세상에서 아이가 스스로 빛날 <span className="text-[#E0E0E0] font-medium border-b border-[#c4a47c]/50 pb-1">'지적 자립심'</span>을 설계합니다.
           </p>
         </motion.div>
 
