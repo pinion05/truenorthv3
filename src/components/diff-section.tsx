@@ -61,7 +61,7 @@ export function DiffSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#c4a47c]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <div className="mb-10 pb-6 border-b border-[#2e2e2e] relative z-10">
-              <h3 className="text-[#c4a47c] text-2xl font-serif font-bold mb-2">Project TRUE NORTH</h3>
+              <h3 className="text-[#c4a47c] text-2xl font-serif font-bold mb-2">TRUE NORTH</h3>
               <p className="text-[#c4a47c]/70 text-sm">지적 지배력 (Dominance)</p>
             </div>
             <ul className="space-y-6 flex-grow flex flex-col justify-center relative z-10">

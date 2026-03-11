@@ -49,7 +49,7 @@ export function HeroSection() {
         >
           유학 합격이 아닌<br />
           유학생으로 살아갈 실력을 만드는 교육<br />
-          <span className="font-medium text-[#E0E0E0] mt-2 block">Project TRUE NORTH</span>
+          <span className="font-medium text-[#E0E0E0] mt-2 block">TRUE NORTH</span>
         </motion.p>
         
         <motion.div 
