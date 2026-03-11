@@ -55,6 +55,7 @@ export default function ProgramsPage() {
           {programs.map((prog, index) => (
             <motion.div
               key={index}
+              id={`stage-${index + 1}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

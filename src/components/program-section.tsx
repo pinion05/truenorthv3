@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function ProgramSection() {
   const stages = [
@@ -63,9 +64,12 @@ export function ProgramSection() {
               <p className="text-[#737373] text-sm mb-6 font-medium tracking-wide">{stage.sub}</p>
               <p className="text-[#A0A0A0] font-light leading-relaxed flex-grow">{stage.desc}</p>
               
-              <div className="mt-8 pt-6 border-t border-[#2e2e2e] group-hover:border-[#c4a47c]/30 transition-colors flex items-center text-[#c4a47c] text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300">
+              <Link
+                href={`/programs#stage-${i + 1}`}
+                className="mt-8 pt-6 border-t border-[#2e2e2e] group-hover:border-[#c4a47c]/30 transition-colors flex items-center text-[#c4a47c] text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300 focus-visible:opacity-100 focus-visible:translate-y-0"
+              >
                 자세히 보기 <ArrowRight className="w-4 h-4 ml-2" />
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

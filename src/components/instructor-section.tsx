@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 export function InstructorSection() {
   return (
@@ -26,6 +28,19 @@ export function InstructorSection() {
             <p>
               하버드 로스쿨식 지배력을 보여주는 강한 눈빛과 프로페셔널한 철학을 바탕으로 아이의 잠재력을 한계까지 끌어올립니다.
             </p>
+          </div>
+
+          <div>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="group h-14 rounded-none border-[#c4a47c]/40 bg-transparent px-8 font-sans text-base font-medium text-[#E0E0E0] transition-all duration-300 hover:border-[#c4a47c] hover:bg-[#c4a47c]/8 hover:text-white"
+            >
+              <Link href="/instructors">
+                강사진 자세히 보기
+              </Link>
+            </Button>
           </div>
         </motion.div>
 

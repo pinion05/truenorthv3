@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export function HeroSection() {
@@ -57,18 +58,20 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <Button 
-            variant="outline" 
+          <Button
+            asChild
+            variant="outline"
             size="lg"
             className="border-[#e0e0e0]/20 text-[#E0E0E0] hover:bg-[#e0e0e0]/5 hover:border-[#e0e0e0]/40 transition-all duration-300 font-sans font-medium h-14 px-8 text-base bg-transparent shadow-[0_0_0_rgba(255,255,255,0)] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]"
           >
-            이 교육의 철학 보기
+            <Link href="/how-we-teach">이 교육의 철학 보기</Link>
           </Button>
-          <Button 
+          <Button
+            asChild
             size="lg"
             className="bg-[#c4a47c] text-[#121212] hover:bg-[#d4b48c] transition-all duration-300 font-sans font-bold h-14 px-8 text-base shadow-[0_0_15px_rgba(196,164,124,0.3)] hover:shadow-[0_0_25px_rgba(196,164,124,0.5)]"
           >
-            이 수업이 맞는지 확인하기
+            <Link href="/apply">이 수업이 맞는지 확인하기</Link>
           </Button>
         </motion.div>
       </div>

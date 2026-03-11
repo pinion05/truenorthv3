@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export function CtaSection() {
@@ -24,11 +25,12 @@ export function CtaSection() {
           <span className="text-[#c4a47c]">함께할 수 있는지 먼저 확인합니다.</span>
         </h2>
         
-        <Button 
+        <Button
+          asChild
           size="lg"
           className="bg-[#E0E0E0] text-[#121212] hover:bg-white transition-all duration-500 font-sans font-bold h-16 px-12 text-lg rounded-none w-full sm:w-auto min-w-[280px] shadow-[0_10px_40px_rgba(224,224,224,0.1)] hover:shadow-[0_10px_50px_rgba(224,224,224,0.2)]"
         >
-          사전 인터뷰 신청하기
+          <Link href="/apply">사전 인터뷰 신청하기</Link>
         </Button>
       </motion.div>
     </section>
