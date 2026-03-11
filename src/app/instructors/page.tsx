@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import hwangJoungwookImage from "../../../public/instructors/hwang-joungwook.png";
+import michaelHurtImage from "../../../public/instructors/michael-hurt.png";
 
 export default function InstructorsPage() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const instructors = [
     {
       name: "황정욱 (Joungwook Hwang)",
-      image: `${basePath}/instructors/hwang-joungwook.png`,
+      image: hwangJoungwookImage,
       role: "Master of Logic",
       catchphrase: "\"하버드 로스쿨이 가르치는 '이기는 논리', 유학의 승패를 결정합니다\"",
       academic: [
@@ -31,7 +32,7 @@ export default function InstructorsPage() {
     },
     {
       name: "마이클 허트 (Michael Hurt, Ph.D.)",
-      image: `${basePath}/instructors/michael-hurt.png`,
+      image: michaelHurtImage,
       role: "Master of Insight",
       catchphrase: "\"앤도버 졸업생이자 버클리 박사, 미국 엘리트 교육의 '내부자'가 전하는 진짜 유학.\"",
       academic: [
