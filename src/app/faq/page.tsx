@@ -31,7 +31,7 @@ export default function FAQPage() {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-[#E0E0E0]">
+          <h1 className="mb-6 text-4xl font-serif font-bold text-[#c4a47c] md:text-6xl">
             FAQ
           </h1>
           <p className="text-xl text-[#A0A0A0] font-light">자주 묻는 질문들</p>

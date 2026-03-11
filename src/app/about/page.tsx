@@ -12,7 +12,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="mb-24 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
+          <h1 className="mb-6 text-4xl font-serif font-bold leading-[1.18] md:text-6xl md:leading-[1.08]">
             우리는 왜<br />
             입시 컨설팅을 버렸는가
           </h1>

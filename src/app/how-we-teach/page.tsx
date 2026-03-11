@@ -30,7 +30,7 @@ export default function HowWeTeachPage() {
           transition={{ duration: 0.8 }}
           className="mb-24 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-[#E0E0E0]">
+          <h1 className="mb-6 text-4xl font-serif font-bold leading-[1.18] text-[#E0E0E0] md:text-6xl md:leading-[1.08]">
             입학 허가서는<br />
             <span className="text-[#c4a47c]">우리의 목표가 아닙니다.</span>
           </h1>

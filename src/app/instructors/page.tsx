@@ -76,7 +76,7 @@ export default function InstructorsPage() {
           transition={{ duration: 0.8 }}
           className="mb-24 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-[#E0E0E0]">
+          <h1 className="mb-6 text-4xl font-serif font-bold text-[#c4a47c] md:text-6xl">
             Instructors
           </h1>
           <p className="text-xl text-[#A0A0A0] font-light">누가 가르치는가가 전부입니다.</p>
