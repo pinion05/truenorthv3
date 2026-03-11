@@ -58,7 +58,7 @@ export default function FAQPage() {
               </button>
               
               <div 
-                className={`px-8 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-[500px] pb-8 opacity-100" : "max-h-0 opacity-0"}`}
+                className={`px-8 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${openIndex === index ? "max-h-[500px] pb-8 opacity-100" : "max-h-0 opacity-0"}`}
               >
                 <div className="w-full h-px bg-[#2e2e2e] mb-6"></div>
                 <p className="text-[#A0A0A0] font-light leading-relaxed">
