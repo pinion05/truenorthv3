@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function InstructorsPage() {
   const instructors = [
     {
       name: "황정욱 (Joungwook Hwang)",
+      image: "/instructors/hwang-joungwook.png",
       role: "Master of Logic",
       catchphrase: "\"하버드 로스쿨이 가르치는 '이기는 논리', 유학의 승패를 결정합니다\"",
       academic: [
@@ -28,6 +30,7 @@ export default function InstructorsPage() {
     },
     {
       name: "마이클 허트 (Michael Hurt, Ph.D.)",
+      image: "/instructors/michael-hurt.png",
       role: "Master of Insight",
       catchphrase: "\"앤도버 졸업생이자 버클리 박사, 미국 엘리트 교육의 '내부자'가 전하는 진짜 유학.\"",
       academic: [
@@ -87,14 +90,24 @@ export default function InstructorsPage() {
               transition={{ duration: 0.8 }}
               className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}
             >
-              {/* Photo Placeholder */}
               <div className="w-full lg:w-2/5 aspect-[3/4] bg-[#1a1a1a] rounded-2xl overflow-hidden relative shadow-2xl grayscale contrast-125 brightness-90">
-                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
-                 <div className="absolute bottom-6 left-6 text-[#E0E0E0] font-serif z-10">
-                    <div className="text-sm tracking-widest text-[#c4a47c] mb-1">{instructor.role}</div>
-                    <div className="text-2xl font-bold">{instructor.name.split(' (')[0]}</div>
-                 </div>
+                {instructor.image ? (
+                  <Image
+                    src={instructor.image}
+                    alt={instructor.name}
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    className="object-cover object-top"
+                    priority={index < 2}
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                <div className="absolute bottom-6 left-6 text-[#E0E0E0] font-serif z-10">
+                  <div className="text-sm tracking-widest text-[#c4a47c] mb-1">{instructor.role}</div>
+                  <div className="text-2xl font-bold">{instructor.name.split(' (')[0]}</div>
+                </div>
               </div>
 
               {/* Info */}
